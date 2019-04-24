@@ -15,11 +15,10 @@ class Pokemon
   def self.find(id, db)
     sql = db.prepare("SELECT * FROM ? WHERE id=?")
 
-    String.each do |s|
-      db.execute(s).each do |row|
+      db.execute(sql).each do |row|
         Pokemon.new(row[0], row[1], row[2], db)
       end
-    end
+
   end
 
 end
