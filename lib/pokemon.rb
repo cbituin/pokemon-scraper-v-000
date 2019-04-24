@@ -13,7 +13,7 @@ class Pokemon
   end
 
   def self.find(id, db)
-    sql = db.prepare("SELECT * FROM ? WHERE id = ?")
+    sql = db.prepare("SELECT * FROM ? WHERE id=?")
 
     String.each do |s|
       db.execute(s).each do |row|
