@@ -17,7 +17,7 @@ class Pokemon
 
     db.execute(sql, db, id).each do |row|
       Pokemon.new(row[0], row[1], row[2], db)
-    end.first
+    end
   end
 
 end
