@@ -18,21 +18,6 @@ class Pokemon
     db.execute(sql, db, id).each do |row|
       Pokemon.new(row[0], row[1], row[2], db)
     end.first
-
-  attr_accessor :id, :name, :type
-
-  def initialize(id=nil, name, type)
-    @id = id
-    @name = name
-    @type = type
-  end
-
-  def self.save(row)
-    # sql = "INSERT INTO "
-  end
-
-  def self.find
-
   end
 
 end
